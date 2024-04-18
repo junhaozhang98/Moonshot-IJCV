@@ -13,7 +13,7 @@
 
 <body data-new-gr-c-s-check-loaded="14.1117.0" data-gr-ext-installed="">
 <div class="content">
-<h1><strong>MoonShot: Towards Controllable Video Generation and Editing with Multimodal Conditions</h1>
+<h1><strong>MoonShot: Towards Controllable Video Generation and Editing with Motion-Aware Multimodal Conditions</h1>
 
   <p id="authors"><a href="http://junhaozhang98.github.io"><b>David Junhao Zhang</b></a> <a href="https://menghanxia.github.io"><b>Dongxu Li</b></a> <a href="https://sites.google.com/view/henryle2018/home"><b>Hung Le</b></a><a href="https://yzhang2016.github.io"><b>Mike Zheng Shou</b></a><a href="https://yzhang2016.github.io"><b>Caiming Xiong</b></a><a href="https://yzhang2016.github.io"><b>Doyen Sahoo</b></a></p>
 
@@ -21,23 +21,23 @@
   <span style="font-size: 16px"><b> Salesforce Research</b> &nbsp;&nbsp;<b> Show Lab, NUS</b> 
   </span>
   </p>
-
+<!-- 
   <font size="+1">
     <p style="text-align: center;">
       <a href="https://arxiv.org/abs/2310.15169" target="_blank"><b>[arXiv]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
       <a href="https://github.com/arthur-qiu/LongerCrafter" target="_blank"><b>[Code(coming soon)]</b></a>
     </p>
-  </font>
+  </font> -->
   <br>
 
 </div>
 
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
 <video width="640" height="480" controls>
   <source src="./Mooshot_files/teaser1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
-</div>
+</div> -->
 
 
 
@@ -45,30 +45,14 @@
 
 
 
-<div class="content">
+<!-- <div class="content">
   <h2 style="text-align:center;"><b>Abstract</b></h2>
   <p>Most existing video diffusion models (VDMs) are limited to mere text conditions. Thereby, they are usually lacking in control over visual appearance and geometry structure of the generated videos. This work presents MoonShot, a new video generation model that conditions simultaneously on multimodal inputs of image and text. The model builts upon a core module, called multimodal video block (MVB), which consists of conventional spatialtemporal layers for representing video features, and a decoupled cross-attention layer to address image and text inputs for appearance conditioning. In addition, we carefully design the model architecture such that it can optionally integrate with pre-trained image ControlNet modules for geometry visual conditions, without needing of extra training overhead as opposed to prior methods. Experiments show that with versatile multimodal conditioning mechanisms, \name~demonstrates significant improvement on visual quality and temporal consistency compared to existing models. In addition, the model can be easily repurposed for a variety of generative applications, such as personalized video generation, image animation and video editing, unveiling its potential to serve as a fundamental architecture for controllable video generation.</p>
 </div>
+ -->
 
 
 
-<div class="content">
-  <h2><b>Zero-Shot Subject Customized Video Generation </b></h2>
-  <div style="text-align: center;">
-  <video width="1400" autoplay muted loop playsinline>
-    <!-- Your video file here -->
-    <source src="./Mooshot_files/test.MOV"
-    type="video/mp4">
-  sorry, your browser does not support HTML5 Videos.
-  </video>
-  <video width="1500" autoplay muted loop playsinline>
-    <!-- Your video file here -->
-    <source src="./Mooshot_files/test_2.MOV"
-    type="video/mp4">
-  sorry, your browser does not support HTML5 Videos.
-  </video>
-  </div>
-</div>
 
 
 <head>
@@ -108,11 +92,20 @@
       <!-- 重复四次对于每个视频 -->
       <div class="video-container">
           <video width="100%" muted autoplay loop>
-              <source src="./Mooshot_files/11111.MOV" type="video/mp4">
+              <source src="./Mooshot_files/11111.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
           <div class="overlay-text">An astronaut is walking on the moon</div>
       </div>
+
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/middle.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A middle aged woman walking on the street, whole body, simple background</div>
+      </div>
+
       <div class="video-container">
           <video width="100%" muted autoplay loop>
               <source src="./Mooshot_files/222.mp4" type="video/mp4">
@@ -122,10 +115,49 @@
       </div>
       <div class="video-container">
           <video width="100%" muted autoplay loop>
-              <source src="./Mooshot_files/333.mp4" type="video/mp4">
+              <source src="./Mooshot_files/dog.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
-          <div class="overlay-text">Robotic eagle, 8k unreal engine render, wires and gears</div>
+          <div class="overlay-text">A corgi running on the grass</div>
+      </div>
+
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/thunder.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A wizard is summoning thunder and lightning next to a waterfall</div>
+      </div>
+
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/spider.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">Spider Man is looking around in the time square</div>
+      </div>
+
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/777.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A painting of a french bulldog dog portrait in the style of vincent van gogh the starry night, thick paint, big brushstrokes</div>
+      </div>
+     
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/ocean.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">a big ocean wave at daybreak</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/lady.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text"> Ethnic lady on the beach at sunset, walking slowly into the waters, gentle light</div>
       </div>
       <div class="video-container">
           <video width="100%" muted autoplay loop>
@@ -136,9 +168,30 @@
       </div>
       <div class="video-container">
           <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/shrimp.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">There is a huge lobster on the bathtub, cartoon styleg</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/as.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">an astronaut sitting on the roof of Doge Charger RT 1969, whole scene view, heavy fog around the car</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/game.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">Machinarium is award-winning independent adventure game developed by the makers of Samorost and Bot</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
               <source src="./Mooshot_files/555.mp4" type="video/mp4">
               Your browser does not support the video tag.
-          </video>555
+          </video>
           <div class="overlay-text">A space probe zooms by, carrying scientific instruments, exploring uncharted interstellar regions</div>
       </div>
       <div class="video-container">
@@ -150,10 +203,17 @@
       </div>
       <div class="video-container">
           <video width="100%" muted autoplay loop>
-              <source src="./Mooshot_files/777.mp4" type="video/mp4">
+              <source src="./Mooshot_files/333.mp4" type="video/mp4">
               Your browser does not support the video tag.
           </video>
-          <div class="overlay-text">A painting of a french bulldog dog portrait in the style of vincent van gogh the starry night, thick paint, big brushstrokes</div>
+          <div class="overlay-text">Robotic eagle, 8k unreal engine render, wires and gears</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/bird.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">a humming bird is flying, hovering around flowers in a garden, a super close-up</div>
       </div>
       <div class="video-container">
           <video width="100%" muted autoplay loop>
@@ -162,7 +222,27 @@
           </video>
           <div class="overlay-text">A cute and tiny frog commander inside the Space Shuttle's control cockpit</div>
       </div>
-
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/poke.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">a gypsy woman playing with a pile of tarot cards, in the style of Hayao Miyazaki's animation</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/burger.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A self rotating hamburger</div>
+      </div>
+      <div class="video-container">
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/resized_video_672x384.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">a cute monkey doing figure skating on the ice, with a dora backpack on its back</div>
+      </div>
       
     </div>
     
@@ -183,6 +263,29 @@
       }
   });
 </script>
+
+
+
+
+
+
+<div class="content">
+  <h2><b>Zero-Shot Subject Customized Video Generation </b></h2>
+  <div style="text-align: center;">
+  <video width="1400" autoplay muted loop playsinline>
+    <!-- Your video file here -->
+    <source src="./Mooshot_files/test.MOV"
+    type="video/mp4">
+  sorry, your browser does not support HTML5 Videos.
+  </video>
+  <video width="1500" autoplay muted loop playsinline>
+    <!-- Your video file here -->
+    <source src="./Mooshot_files/test_2.MOV"
+    type="video/mp4">
+  sorry, your browser does not support HTML5 Videos.
+  </video>
+  </div>
+</div>
 
 
 
@@ -236,6 +339,103 @@
   </video>
   </div>
 </div>
+
+
+<head>
+  <title>视频网格</title>
+  <style>
+      /* 设置网格布局 */
+      .video-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr); /* 创建四列 */
+          gap: 10px; /* 设置网格间距 */
+      }
+      /* 视频容器样式 */
+      .video-container {
+          position: relative;
+      }
+      /* 文本样式 */
+      .overlay-text {
+            position: absolute;
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 确保完全居中 */
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            display: none; /* 默认不显示文本 */
+            text-align: center; /* 文本居中对齐 */
+            width: 80%; /* 可根据需要调整宽度 */
+        }dogdogdogasdsad
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h2><b>Ablation for effect of the motion-aware module and spatiotemporal layers</b></h2>
+    <div style="text-align: center;">
+    <div class="video-grid">
+      <!-- 重复四次对于每个视频 -->
+      <div class="video-container">
+        baseline
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_robot.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A robot is walking</div>
+      </div>
+
+      <div class="video-container">
+        + motion-aware
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_robot0.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          "A robot is walking" Image to Video (Same Seed)
+          <div class="overlay-text">A robot is walking</div>
+      </div>
+
+      <div class="video-container">
+        ++spatiotemporal attention
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_robot1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A robot is walking</div>
+      </div>
+      <div class="video-container">
+        baseline
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_corgi0.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A corgi running on the grass</div>
+      </div>
+
+      <div class="video-container">
+        + motion-aware
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_corgi.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          "A corgi running on the grass" Text to Video (Same Seed)
+          <div class="overlay-text">A corgi running on the grass</div>
+      </div>
+
+      <div class="video-container">
+        ++ spatiotemporal attention
+          <video width="100%" muted autoplay loop>
+              <source src="./Mooshot_files/baseline_corgi2.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <div class="overlay-text">A corgi running on the grass</div>
+      </div>
+    </div>
+    
+    </div>
+</div>
+  
+
 
 <div class="content">
   <h2><b>Ablation for Mutimodal Cross-Attn for Video Generation</b></h2>
